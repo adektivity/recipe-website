@@ -1,0 +1,229 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --text-color: hsl(30, 10%, 34%);
+  --title-color: hsl(24, 5%, 18%);
+  --heading-color: hsl(14, 45%, 36%);
+  --mobile-background: hsl(0, 0%, 100%);
+  --card-background: hsl(330, 100%, 98%);
+  --card-heading: hsl(332, 51%, 32%);
+  --hr-color: hsl(30, 18%, 87%);
+}
+
+body {
+  background: var(--mobile-background);
+  font-family: "Outfit";
+  font-size: 1rem;
+  font-weight: 400;
+  color: var(--text-color);
+  line-height: 1.5;
+  /* text-align: center; */
+}
+
+img {
+  width: 100%;
+}
+
+h1,
+h2 {
+  font-family: "Young Serif";
+  font-weight: 400;
+}
+
+h1 {
+  font-size: 2rem;
+  line-height: 1.1;
+  color: var(--title-color);
+}
+
+/* h2 {
+  font-weight: 600;
+} */
+
+ul,
+ol {
+  padding-left: 1.5rem;
+}
+
+li {
+  padding-left: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+
+hr {
+  width: 85%;
+  margin: 0 auto;
+  border: none;
+  background: var(--hr-color);
+  height: 1px;
+}
+
+/* p {
+  font-size: 16px;
+} */
+
+.container {
+  max-width: 375px;
+  margin: 0 auto;
+}
+
+.sub-sections {
+  padding: 1.5rem;
+}
+
+.sub-sections > * {
+  margin-bottom: 1.5rem;
+}
+
+.sub-sections .card {
+  background: var(--card-background);
+  border-radius: 10px;
+}
+
+.card ul li::marker {
+  color: var(--card-heading);
+}
+
+.card-heading {
+  color: var(--card-heading);
+  font-weight: 600;
+  font-size: 18px;
+}
+
+.card-content {
+  padding: 1rem;
+}
+
+.card-heading {
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+
+.list-heading {
+  font-weight: bold;
+}
+
+.ingredients ul li::marker {
+  color: var(--heading-color);
+}
+
+.sub-section-heading {
+  font-family: "Young Serif";
+  color: var(--heading-color);
+  font-size: 1.7rem;
+  margin-bottom: 1rem;
+}
+
+.sub-sections ol li::marker {
+  color: var(--heading-color);
+  font-weight: bold;
+}
+
+/* Used ChatGPT for a better table */
+/* table {
+  border-collapse: collapse;
+} */
+
+/* .nutrition-table {
+  padding-left: 2rem;
+  border-collapse: collapse;
+} */
+
+/* .nutrition-table td {
+  border-bottom: 1px solid black;
+}
+
+.nutrition-data {
+  padding-left: 2rem;
+} */
+
+.nutrition-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 1rem;
+}
+
+.nutrition-table tr {
+  border-bottom: 1px solid var(--hr-color);
+}
+
+.nutrition-table td {
+  padding: 10px 0;
+  font-size: 1rem;
+}
+
+/* Left column */
+.nutrition-table td:first-child {
+  padding-left: 2rem;
+}
+
+/* Right column */
+.nutrition-table td:last-child {
+  font-weight: 600;
+  color: var(--heading-color);
+}
+
+/* Remove border from last row */
+.nutrition-table tr:last-child {
+  border-bottom: none;
+}
+
+@media (min-width: 768px) {
+  .recipe-body {
+    background: var(--card-background);
+    /* Has no effect on the webpage functionality */
+    /* display: grid;
+    align-content: start; */
+    /* border: 3px solid red; */
+    /* min-height: 100vh; */
+  }
+
+  .container {
+    background: var(--card-background);
+    max-width: 900px;
+    padding: 6rem 4rem;
+    margin: 0 auto;
+    /* border: 3px solid purple; */
+    /* place-self: center; */
+  }
+
+  .desktop-card {
+    /* border: 3px solid green; */
+    padding: 2rem;
+    background: var(--mobile-background);
+    /* text-align: left; */
+    border-radius: 0.8rem;
+  }
+
+  .sub-sections {
+    padding: 0;
+    text-align: left;
+  }
+
+  .header-image {
+    border-radius: 0.5rem;
+    margin-bottom: 1rem;
+  }
+
+  h2 {
+    margin-top: 1rem;
+  }
+
+  hr {
+    width: 99%;
+  }
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
